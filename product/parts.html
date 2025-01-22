@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Parts | Ridstar Premium Electric Bikes" data-bg="Части | Ridstar Премиум Електрически Велосипеди">Части | Ridstar Премиум Електрически Велосипеди</title>
+    <link href="../images/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="../css/parts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/parts.js"></script>
+    <style>
+        /* CSS to hide the language selector in the header on mobile */
+        @media (max-width: 768px) {
+            .header-actions .language-selector {
+                display: none; /* Hide on mobile */
+            }
+        }
+        .language-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Remove old language selector styles */
+        .language-selector {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/ridstar-logo.png" alt="Лого на Ridstar">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html" data-en="Home" data-bg="Начало">Начало</a></li>
+                        <li><a href="../PRODUCT/index.html" data-en="Bikes" data-bg="Колела">Колела</a></li>
+                        <li><a href="parts.html" class="active" data-en="Parts" data-bg="Части">Части</a></li>
+                        <li><a href="../about.html" data-en="About" data-bg="За нас">За нас</a></li>
+                        <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                    <div class="cart-icon-wrapper">
+                        <a href="#" class="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <button class="language-button" onclick="toggleLanguage()" data-en="БГ" data-bg="EN">EN</button>
+                </div>
+            </div>
+        </header>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="../index.html" data-en="Home" data-bg="Начало" class="active">Начало</a></li>
+                <li><a href="../PRODUCT/index.html" data-en="Bikes" data-bg="Колела">Колела</a></li>
+                <li><a href="parts.html" data-en="Parts" data-bg="Части">Части</a></li>
+                <li><a href="../about.html" data-en="About" data-bg="За нас">За нас</a></li>
+                <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <main class="site-main">
+            <div class="shop-container">
+                <!-- Page Title -->
+                <div class="page-title">
+                    <h1 data-en="Ridstar Parts" data-bg="Части на Ridstar">Части на Ridstar</h1>
+                    <p data-en="Original parts and accessories for your Ridstar e-bike" data-bg="Оригинални части и аксесоари за вашия електрически велосипед Ridstar">Оригинални части и аксесоари за вашия електрически велосипед Ridstar</p>
+                </div>
+
+                <!-- Shop Filters -->
+                <div class="shop-filters">
+                    <div class="filter-wrapper">
+                        <select class="sort-dropdown">
+                            <option value="default" data-en="Default sorting" data-bg="По подразбиране">По подразбиране</option>
+                            <option value="popularity" data-en="Sort by popularity" data-bg="Сортиране по популярност">Сортиране по популярност</option>
+                            <option value="rating" data-en="Sort by average rating" data-bg="Сортиране по средна оценка">Сортиране по средна оценка</option>
+                            <option value="latest" data-en="Sort by latest" data-bg="Сортиране по новост">Сортиране по новост</option>
+                            <option value="price-low" data-en="Sort by price: low to high" data-bg="Сортиране по цена: ниска към висока">Сортиране по цена: ниска към висока</option>
+                            <option value="price-high" data-en="Sort by price: high to low" data-bg="Сортиране по цена: висока към ниска">Сортиране по цена: висока към ниска</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/battery.jpg" alt="E-Bike Battery">
+                            <span class="sale-badge">Разпродажба!</span>
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" data-en="Batteries" data-bg="Батерии">Батерии</span>
+                            <h2 class="product-title">
+                                <a href="#" data-en="Ridstar Q20/Q20 Lite Battery Pack" data-bg="Батерия за Ridstar Q20/Q20 Lite">Батерия за Ridstar Q20/Q20 Lite</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$470.00</span>
+                                <span class="sale-price">$389.00</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-en="Add to cart" data-bg="Добави в количката">Добави в количката</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/display.jpg" alt="LCD Display">
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" data-en="Electronics" data-bg="Електроника">Електроника</span>
+                            <h2 class="product-title">
+                                <a href="#" data-en="LCD Display Panel" data-bg="LCD Дисплей">LCD Дисплей</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$89.00</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-en="Add to cart" data-bg="Добави в количката">Добави в количката</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/motor.jpg" alt="E-Bike Motor">
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" data-en="Motors" data-bg="Мотори">Мотори</span>
+                            <h2 class="product-title">
+                                <a href="#" data-en="750W Hub Motor" data-bg="750W Главен Мотор">750W Главен Мотор</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$299.00</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-en="Add to cart" data-bg="Добави в количката">Добави в количката</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/controller.jpg" alt="Motor Controller">
+                            <span class="sale-badge">Sale!</span>
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Electronics</span>
+                            <h2 class="product-title">
+                                <a href="#">48V Motor Controller</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$159.00</span>
+                                <span class="sale-price">$129.00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/brake-set.jpg" alt="Hydraulic Brake Set">
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Brakes</span>
+                            <h2 class="product-title">
+                                <a href="#">Hydraulic Disc Brake Set</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$189.00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/tire.jpg" alt="All-Terrain Tire">
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Tires</span>
+                            <h2 class="product-title">
+                                <a href="#">26" All-Terrain Tire</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$45.00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/charger.jpg" alt="Battery Charger">
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Electronics</span>
+                            <h2 class="product-title">
+                                <a href="#">48V Fast Charger</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$79.00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../images/parts/suspension-fork.jpg" alt="Suspension Fork">
+                            <span class="sale-badge">Sale!</span>
+                            <div class="product-actions">
+                                <a href="#" class="quick-view"><i class="far fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Suspension</span>
+                            <h2 class="product-title">
+                                <a href="#">Air Suspension Fork</a>
+                            </h2>
+                            <div class="product-price">
+                                <span class="regular-price">$299.00</span>
+                                <span class="sale-price">$249.00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-widgets">
+                    <div class="footer-widget">
+                        <h3 data-en="About Ridstar" data-bg="За Ridstar">За Ridstar</h3>
+                        <p data-en="Premium electric bikes designed for the modern rider." data-bg="Премиум електрически велосипеди, проектирани за съвременния ездач.">Премиум електрически велосипеди, проектирани за съвременния ездач.</p>
+                    </div>
+                    <div class="footer-widget">
+                        <h3 data-en="Quick Links" data-bg="Бързи връзки">Бързи връзки</h3>
+                        <ul>
+                            <li><a href="../about.html" data-en="About Us" data-bg="За нас">За нас</a></li>
+                            <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+                            <li><a href="../shipping-policy.html" data-en="Shipping Policy" data-bg="Политика за доставка">Политика за доставка</a></li>
+                            <li><a href="../returns-policy.html" data-en="Returns Policy" data-bg="Политика за връщане">Политика за връщане</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3 data-en="Follow Us" data-bg="Следвайте ни">Следвайте ни</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/ridstarbulgaria/"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.tiktok.com/@ridstarbulgaria"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Ridstar. Всички права запазени.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2 data-en="Shopping Cart" data-bg="Пазарска количка">Пазарска количка</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-en="Total:" data-bg="Общо:">Общо:</span>
+                    <span class="total-amount">$0.00</span>
+                </div>
+                <button class="checkout-btn" data-en="Proceed to Checkout" data-bg="Продължи към плащане">Продължи към плащане</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/parts.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        let currentLanguage = 'bg';
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'bg' ? 'en' : 'bg';
+            
+            // Update the button text
+            const langButton = document.querySelector('.language-button');
+            langButton.textContent = langButton.getAttribute(`data-${currentLanguage}`);
+
+            // Update all elements with data attributes
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                const translation = element.getAttribute(`data-${currentLanguage}`);
+                if (translation.includes('<span')) {
+                    element.innerHTML = translation;
+                } else {
+                    element.textContent = translation;
+                }
+            });
+
+            // Save language preference
+            localStorage.setItem('selectedLanguage', currentLanguage);
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'bg';
+            if (savedLang !== currentLanguage) {
+                currentLanguage = savedLang;
+                toggleLanguage();
+            }
+        });
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active'); // Toggle the active class
+        }
+    </script>
+</body>
+</html> 

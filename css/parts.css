@@ -1,0 +1,451 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+.site-header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #FF6B6B;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Shop Container Styles */
+.shop-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Shop Filters */
+.shop-filters {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sort-dropdown {
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    position: relative;
+    padding-top: 100%;
+    background: #f8f8f8;
+}
+
+.product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #FF6B6B;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-actions {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+}
+
+.quick-view {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.quick-view:hover {
+    background: #FF6B6B;
+    color: white;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.product-title a:hover {
+    color: #FF6B6B;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.regular-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sale-price {
+    color: #FF6B6B;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #ff5252;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background: #FF6B6B;
+    color: white;
+    border-color: #FF6B6B;
+}
+
+/* Footer Styles */
+.site-footer {
+    background: #333;
+    color: white;
+    padding: 60px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-widget h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-widget ul {
+    list-style: none;
+}
+
+.footer-widget ul li {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #FF6B6B;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: block; /* Default hidden */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    padding: 80px 40px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+    display: flex; /* Show when active */
+    right: 0; /* Slide in from the right */
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu li {
+    margin: 20px 0; /* Space between menu items */
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #333; /* Change to your desired color */
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: 500;
+}
+
+.mobile-menu a:hover {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+/* Hamburger Button Styles */
+.header-actions .mobile-menu-btn {
+    display: flex; /* Ensure it's displayed on mobile */
+    flex-direction: column; /* Stack the spans vertically */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 9999; /* Ensure it's above other elements */
+    position: relative; /* Ensure it's positioned correctly */
+}
+
+.header-actions .mobile-menu-btn span {
+    display: block; /* Ensure spans are block elements */
+    width: 24px; /* Adjust width to match cart icon */
+    height: 3px; /* Adjust height to make it slimmer */
+    background: rgb(0, 0, 0); /* Change color to white for visibility */
+    margin: 3px 0; /* Space between spans */
+    transition: background 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* When the menu is active, style the spans to form an X */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(-50%, -50%); /* Top bar */
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(-50%, 50%); /* Bottom bar */
+}
+
+/* Show the button on mobile */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    .mobile-menu-btn {
+        display: flex; /* Show on mobile */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .contact-info h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-method {
+        padding: 1rem;
+    }
+    
+    .social-links {
+        margin-top: 2rem;
+    }
+}
+
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .footer-widgets {
+        grid-template-columns: 1fr;
+    }
+
+.mobile-menu-btn span:hover {
+    background: #000000; /* Change color on hover */
+}
+
+/* Hide mobile menu button on larger screens */
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none; /* Hide the button on desktop */
+    }
+}
+
+@media (min-width: 769px) {
+    .header-actions .mobile-menu-btn {
+        display: none; /* Hide the button on desktop */
+    }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Ridstar | Contact Us" data-bg="Ридстар | Свържете се с нас">Ридстар | Свържете се с нас</title>
+    <link href="product-hotspot/images/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/language.js" defer></script>
+    <style>
+        /* CSS to hide the language selector in the header on mobile */
+        @media (max-width: 768px) {
+            .header-actions .language-selector {
+                display: none; /* Hide on mobile */
+            }
+        }
+
+        .language-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .language-selector {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <header>
+            <div class="logo">
+                <img src="images/ridstar-logo.png" alt="Ridstar" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-bg="Начало">Начало</a></li>
+                    <li><a href="product/index.html" data-en="Bikes" data-bg="Колела">Колела</a></li>
+                    <li><a href="product/parts.html" data-en="Shop" data-bg="Части">Части</a></li>
+                    <li><a href="contact.html" class="active" data-en="Contact us" data-bg="Контакт">Контакт</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="contact-content">
+            <div class="contact-info">
+                <h1 data-en="Get in Touch" data-bg="Свържете се с нас">Свържете се с нас</h1>
+                <p class="subtitle" data-en="We'd love to hear from you. Here's how you can reach us." 
+                   data-bg="Ще се радваме да чуем от вас. Ето как можете да се свържете с нас.">
+                    Ще се радваме да чуем от вас. Ето как можете да се свържете с нас.
+                </p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div class="method-details">
+                            <h3 data-en="Call Us" data-bg="Обадете се">Обадете се</h3>
+                            <p>0878 26 26 36</p>
+                            <p class="time" data-en="Mon-Fri, 9am-6pm" data-bg="Пн-Пет, 9ч-18ч">Пн-Пет, 9ч-18ч</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div class="method-details">
+                            <h3 data-en="Email Us" data-bg="Пишете ни">Пишете ни</h3>
+                            <p>ridstarbulgaria@gmail.com</p>
+                            <p class="time" data-en="We reply within 24 hours" data-bg="Отговаряме в рамките на 24 часа">Отговаряме в рамките на 24 часа</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="method-details">
+                            <h3 data-en="Visit Us" data-bg="Посетете ни">Посетете ни</h3>
+                            <p>TOPOLOWA 24, 12. 05827 GRODZISK MAZOWIECKI POLAND</p>
+                            <p class="time">TOPOLOWA, POLAND</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xwpvkeqr" method="POST">
+                <div class="form-group">
+                    <label for="name" data-en="Name" data-bg="Име">Име</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" data-en="Email" data-bg="Имейл">Имейл</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" data-en="Subject" data-bg="Тема">Тема</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" data-en="Select a subject" data-bg="Изберете тема">Изберете тема</option>
+                        <option value="sales" data-en="Sales Inquiry" data-bg="Запитване за продажби">Запитване за продажби</option>
+                        <option value="support" data-en="Technical Support" data-bg="Техническа поддръжка">Техническа поддръжка</option>
+                        <option value="warranty" data-en="Warranty Claim" data-bg="Гаранционна претенция">Гаранционна претенция</option>
+                        <option value="other" data-en="Other" data-bg="Друго">Друго</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" data-en="Message" data-bg="Съобщение">Съобщение</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" data-en="Send Message" data-bg="Изпрати съобщение">
+                    Изпрати съобщение
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+        <script>
+            function clearform() {
+                document.getElementById('contactForm').reset();
+            }
+        </script>
+
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ridstarbulgaria/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@ridstarbulgaria"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html" data-en="Home" data-bg="Начало">Начало</a></li>
+            <li><a href="product/index.html" data-en="Bikes" data-bg="Колела">Колела</a></li>
+            <li><a href="PRODUCT/SHOP.html" data-en="Shop" data-bg="Магазин">Магазин</a></li>
+            <li><a href="contact.html" class="active" data-en="Contact us" data-bg="Свържете се с нас">Свържете се с нас</a></li>
+        </ul>
+    </div>
+
+    <button class="language-button" onclick="toggleLanguage()" data-en="БГ" data-bg="EN">EN</button>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animation timeline
+        const tl = gsap.timeline();
+
+        tl.from('.logo', {
+            opacity: 0,
+            x: -50,
+            duration: 1
+        })
+        .from('nav ul li', {
+            opacity: 0,
+            y: -20,
+            duration: 0.8,
+            stagger: 0.2
+        }, "-=0.5")
+        .from('.contact-info h1, .contact-info .subtitle', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.2
+        }, "-=0.5")
+        .from('.contact-method', {
+            opacity: 0,
+            x: -30,
+            duration: 0.8,
+            stagger: 0.2
+        }, "-=0.5")
+        .from('.contact-form', {
+            opacity: 0,
+            x: 30,
+            duration: 0.8
+        }, "-=0.8");
+
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.mobile-menu').classList.toggle('active');
+            
+            const spans = this.querySelectorAll('span');
+            if (this.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+        let currentLanguage = 'bg';
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'bg' ? 'en' : 'bg';
+            
+            // Update the button text
+            const langButton = document.querySelector('.language-button');
+            langButton.textContent = langButton.getAttribute(`data-${currentLanguage}`);
+
+            // Update all elements with data attributes
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                const translation = element.getAttribute(`data-${currentLanguage}`);
+                if (translation.includes('<span')) {
+                    element.innerHTML = translation;
+                } else {
+                    element.textContent = translation;
+                }
+            });
+
+            // Save language preference
+            localStorage.setItem('selectedLanguage', currentLanguage);
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'bg';
+            if (savedLang !== currentLanguage) {
+                currentLanguage = savedLang;
+                toggleLanguage();
+            }
+        });
+    </script>
+</body>
+</html> 

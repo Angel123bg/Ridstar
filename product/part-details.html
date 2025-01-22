@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Ridstar Q-20 | Premium Electric Bikes" data-bg="Ридстар Q-20 | Премиум Електрически Велосипеди">Ридстар Q-20 | Премиум Електрически Велосипеди</title>
+    <link href="../images/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="parts.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/bike-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        .language-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .back-arrow {
+            position: fixed; /* Use fixed positioning */
+            top: 100px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            font-size: 24px; /* Adjust size as needed */
+            color: #333; /* Adjust color as needed */
+            text-decoration: none;
+            display: none; /* Hide by default */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+
+        @media (max-width: 768px) {
+            .back-arrow {
+                display: block; /* Show on mobile */
+            }
+        }
+
+        .back-arrow:hover {
+            color: #007bff; /* Change color on hover */
+        }
+        </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <a href="../product/parts.html" class="back-arrow" aria-label="Back to Home">
+            <i class="fas fa-arrow-left"></i> <!-- Font Awesome arrow icon -->
+        </a>
+        <!-- Header (same as index.html) -->
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/ridstar-logo.png" alt="Лого на Ридстар">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html" data-en="Home" data-bg="Начало">Начало</a></li>
+                        <li><a href="index.html" class="active" data-en="Bikes" data-bg="Мотоциклети">Мотоциклети</a></li>
+                        <li><a href="parts.html" data-en="Parts" data-bg="Части">Части</a></li>
+                        <li><a href="../about.html" data-en="About" data-bg="За нас">За нас</a></li>
+                        <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-button" onclick="toggleLanguage()" data-en="БГ" data-bg="EN">EN</button>
+                    </div>
+                    <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                    <div class="cart-icon-wrapper">
+                        <a href="#" class="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="site-main">
+            <div class="product-details-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="../images/parts/battery.jpg" alt="Ридстар Q-20">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <img src="../images/parts/battery.jpg" alt="Детайл 1">
+                        <img src="../images/bike-detail2.jpg" alt="Детайл 2">
+                        <img src="../images/bike-detail3.jpg" alt="Детайл 3">
+                        <img src="../images/bike-detail4.jpg" alt="Детайл 4">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 data-en="Battery" data-bg="Батерия">Батерия</h1>
+                    <div class="product-subtitle" data-en="Base Model" data-bg="Базов модел">Базов модел</div>
+                    
+                    <div class="price-section">
+                        <div class="price-tag">
+                            <span class="current-price" data-en="1180€" data-bg="2300 лв">2300 лв</span>
+                            <span class="original-price" data-en="1280€" data-bg="2500 лв">2500 лв</span>
+                        </div>
+                        <span class="stock-status in-stock" data-en="In Stock" data-bg="В наличност">В наличност</span>
+                    </div>
+
+                    <div class="key-features">
+                        <h2 data-en="Key Features" data-bg="Основни характеристики">Основни характеристики</h2>
+                        <ul>
+                            <li><i class="fas fa-bolt"></i> 48V 20AH Батерия</li>
+                            <li><i class="fas fa-battery-full"></i> 48V 20AH Батерия</li>
+                            <li><i class="fas fa-tachometer-alt"></i> 33MPH Максимална скорост</li>
+                            <li><i class="fas fa-road"></i> 45+ Мили обхват</li>
+                            <li><i class="fas fa-clock"></i> 4-6 Часа време за зареждане</li>
+                        </ul>
+                    </div>
+
+                    <div class="purchase-options">
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart" data-en="Add to Cart" data-bg="Добави в количката">Добави в количката</button>
+                        <button class="buy-now" data-en="Buy Now" data-bg="Купи сега">Купи сега</button>
+                    </div>
+
+                    <div class="product-description">
+                        <h2 data-en="Description" data-bg="Описание">Описание</h2>
+                        <p data-en="The Ridstar Q-20 is the perfect entry into electric biking. This versatile e-bike combines power, comfort, and style to deliver an exceptional riding experience." data-bg="Ридстар Q-20 е перфектният вход в електрическото колоездене. Този универсален електрически велосипед съчетава мощност, комфорт и стил, за да предостави изключително изживяване при каране.">Ридстар Q-20 е перфектният вход в електрическото колоездене. Този универсален електрически велосипед съчетава мощност, комфорт и стил, за да предостави изключително изживяване при каране.</p>
+                        
+                        <div class="specs-table">
+                            <h3 data-en="Technical Specifications" data-bg="Технически спецификации">Технически спецификации</h3>
+                            <table>
+                                <tr>
+                                    <th data-en="Motor" data-bg="Мотор">Мотор</th>
+                                    <td data-en="48V 20AH Battery" data-bg="48V 20AH Батерия">48V 20AH Батерия</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Battery" data-bg="Батерия">Батерия</th>
+                                    <td data-en="48V 20AH Lithium-ion" data-bg="48V 20AH Литиево-йонна">48V 20AH Литиево-йонна</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Range" data-bg="Обхват">Обхват</th>
+                                    <td data-en="45+ miles per charge" data-bg="45+ мили на зареждане">45+ мили на зареждане</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Max Speed" data-bg="Максимална скорост">Максимална скорост</th>
+                                    <td data-en="33 MPH" data-bg="33 MPH">33 MPH</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Frame" data-bg="Рамка">Рамка</th>
+                                    <td data-en="6061 Aluminum Alloy" data-bg="6061 Алуминиева сплав">6061 Алуминиева сплав</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Brakes" data-bg="Спирачки">Спирачки</th>
+                                    <td data-en="Hydraulic Disc Brakes" data-bg="Хидравлични дискови спирачки">Хидравлични дискови спирачки</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Tires" data-bg="Гуми">Гуми</th>
+                                    <td data-en="26\" x 4.0\" All-Terrain" data-bg="26\" x 4.0\" Всичкостепенни">20" x 4.0" Всичкостепенни</td>
+                                </tr>
+                                <tr>
+                                    <th data-en="Weight" data-bg="Тегло">Тегло</th>
+                                    <td data-en="65 lbs (29.5 kg)" data-bg="65 lbs (29.5 kg)">65 lbs (29.5 kg)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (same as index.html) -->
+        <footer class="site-footer">
+            <!-- ... footer content ... -->
+        </footer>
+
+        <!-- Cart Overlay -->
+        <div class="cart-overlay">
+            <div class="cart-modal">
+                <div class="cart-header">
+                    <h2 data-en="Shopping Cart" data-bg="Пазарска количка">Пазарска количка</h2>
+                    <button class="close-cart">&times;</button>
+                </div>
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span data-en="Total:" data-bg="Общо:">Общо:</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                    <button class="checkout-btn" data-en="Proceed to Checkout" data-bg="Продължи към плащане">Продължи към плащане</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bike-details.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        let currentLanguage = 'bg';
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'bg' ? 'en' : 'bg';
+    updateContent();
+    
+    // Update the button text
+    const langButton = document.querySelector('.language-button');
+    langButton.textContent = langButton.getAttribute(`data-${currentLanguage}`);
+}
+
+function updateContent() {
+    const elements = document.querySelectorAll('[data-en]');
+    elements.forEach(element => {
+        element.textContent = element.getAttribute(`data-${currentLanguage}`);
+    });
+}
+    </script>
+</body>
+</html> 

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridstar | Premium Electric Bikes</title>
+    <link href="C:\Users\Angel\Documents\SITE\images\favicon.ico" rel="icon">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/language.js" defer></script>
+    <style>
+        /* Add this CSS to make the language button pop out on mobile */
+        @media (max-width: 768px) {
+            .language-selector {
+                position: relative;
+                z-index: 10; /* Ensure it appears above other elements */
+                background-color: #fff; /* Background color for contrast */
+                border: 2px solid #007BFF; /* Border to make it stand out */
+                border-radius: 5px; /* Rounded corners */
+                padding: 10px; /* Padding for better touch area */
+                transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            }
+
+            .language-selector:hover {
+                transform: scale(1.05); /* Slightly enlarge on hover */
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+            }
+        }
+
+        .language-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Remove the old language selector styles */
+        .language-selector {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <header>
+            <div class="logo">
+                <img src="images/ridstar-logo.png" alt="Ridstar" class="logo-img">
+            </div>
+        </header>
+
+        <main>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 data-en="The Future of <span class='highlight'>Electric</span> Mobility" 
+                            data-bg="Бъдещето на <span class='highlight'>електрическата</span> мобилност">
+                            Бъдещето на <span class='highlight'>електрическата</span> мобилност
+                        </h1>
+                        <p data-en="Discover the perfect blend of power, style, and sustainability with our premium electric bikes. Experience the revolution in urban transportation."
+                           data-bg="Открийте перфектната комбинация от мощност, стил и устойчивост с нашите електрически велосипеди. Изпитайте революцията в градския транспорт.">
+                            Открийте перфектната комбинация от мощност, стил и устойчивост с нашите електрически велосипеди. Изпитайте революцията в градския транспорт.
+                        </p>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <div class="feature-text">
+                                <h3>Fast Charging</h3>
+                                <p>0-80% in 2 hours</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div class="feature-text">
+                                <h3>Top Speed</h3>
+                                <p>45 km/h</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-road"></i>
+                            <div class="feature-text">
+                                <h3>Range</h3>
+                                <p>Up to 100 km</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <a href="product/index.html" class="primary-btn">
+                            Explore Models
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <div class="price-tag">
+                            <span>Starting from</span>
+                            <h3>$950</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <div class="floating-elements">
+                            <div class="spec-card rear-suspension">
+                                <svg class="icon" width="16" height="16" viewBox="0 0 24 24">
+                                    <path d="M7 4L7 6L9 8L9 16L7 18L7 20L17 20L17 18L15 16L15 8L17 6L17 4L7 4Z" 
+                                          fill="currentColor"/>
+                                </svg>
+                                Rear Suspension
+                            </div>
+                            <div class="spec-card display">
+                                <i class="fas fa-desktop icon"></i>
+                                LCD Smart Display
+                            </div>
+                            <div class="spec-card gear">
+                                <i class="fas fa-cogs"></i>
+                                <span>Front Suspension Fork</span>
+                            </div>
+                            <div class="spec-card suspension">
+                                <i class="fas fa-compress-arrows-alt"></i>
+                                <span>Fat Tires 20"x4.0</span>
+                            </div>
+                            <div class="spec-card battery">
+                                <i class="fas fa-battery-full"></i>
+                                <span>Shimano Gears</span>
+                            </div>
+                            <div class="spec-card motor">
+                                <i class="fas fa-cog"></i>
+                                <span>Bafang 1500W Motor</span>
+                            </div>
+                        </div>
+                        <img src="images/bike.png" alt="Ridstar Electric Bike" class="main-bike">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <div class="social-proof">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5 Rating</span>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-users"></i>
+                        <span>1000+ Happy Riders</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ridstarbulgaria/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@ridstarbulgaria"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Hero animations
+        const tl = gsap.timeline();
+        
+        tl.from('.logo', {
+            opacity: 0,
+            x: -50,
+            duration: 1
+        })
+        .from('nav ul li', {
+            opacity: 0,
+            y: -20,
+            duration: 0.8,
+            stagger: 0.2
+        }, "-=0.5")
+        .from('.hero-text', {
+            opacity: 0,
+            y: 50,
+            duration: 1
+        }, "-=0.5")
+        .from('.features', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8
+        }, "-=0.3")
+        .from('.main-bike', {
+            opacity: 0,
+            scale: 0.8,
+            duration: 1
+        }, "-=0.8");
+
+        // Floating elements animation
+        gsap.from('.spec-card', {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.hero-visual',
+                start: 'top center'
+            }
+        });
+    </script>
+    <script src="js/main.js" defer></script>
+    <script>
+        let currentLanguage = 'bg';
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'bg' ? 'en' : 'bg';
+            
+            // Update the button text
+            const langButton = document.querySelector('.language-button');
+            langButton.textContent = langButton.getAttribute(`data-${currentLanguage}`);
+
+            // Update all elements with data attributes
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                const translation = element.getAttribute(`data-${currentLanguage}`);
+                if (translation.includes('<span')) {
+                    element.innerHTML = translation;
+                } else {
+                    element.textContent = translation;
+                }
+            });
+
+            // Save language preference
+            localStorage.setItem('selectedLanguage', currentLanguage);
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'bg';
+            if (savedLang !== currentLanguage) {
+                currentLanguage = savedLang;
+                toggleLanguage();
+            }
+        });
+    </script>
+    <button class="language-button" onclick="toggleLanguage()" data-en="БГ" data-bg="EN">EN</button>
+</body>
+</html>

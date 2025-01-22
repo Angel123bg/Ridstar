@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Checkout" data-bg="Плащане">Плащане</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .checkout-container {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .checkout-left, .checkout-right {
+            padding: 40px;
+        }
+        .checkout-left {
+            flex: 1;
+            background-color: #f9fafb;
+            border-right: 1px solid #dfe4eb;
+        }
+        .checkout-right {
+            flex: 1;
+        }
+        .checkout-left h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #32325d;
+        }
+        .checkout-left p {
+            font-size: 16px;
+            color: #525f7f;
+            margin-bottom: 10px;
+        }
+        .cart-summary {
+            border: 1px solid #dfe4eb;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+            margin-top: 20px;
+        }
+        .cart-summary .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .cart-summary .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #32325d;
+        }
+        .checkout-right h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #32325d;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #6b7c93;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #dfe4eb;
+            border-radius: 4px;
+            background-color: #f6f9fc;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #6772e5;
+            outline: none;
+            background-color: #ffffff;
+        }
+        .stripe-style {
+            border: 1px solid #dfe4eb;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #f6f9fc;
+        }
+        #card-element {
+            padding: 10px;
+            background-color: white;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+            transition: box-shadow 150ms ease;
+        }
+        #card-errors {
+            color: #fa755a;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .checkout-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #6772e5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .checkout-btn:hover {
+            background-color: #5469d4;
+        }
+        @media (max-width: 768px) {
+            .checkout-container {
+                flex-direction: column;
+            }
+            .checkout-left {
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="checkout-left">
+            <h2>Order Summary</h2>
+            <p>Item 1: $30.00</p>
+            <p>Item 2: $20.00</p>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$50.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span>$50.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-right">
+            <h2>Payment Details</h2>
+            <form id="checkout-form" novalidate>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="card-element">Credit or Debit Card</label>
+                    <div id="card-element" class="stripe-style">
+                        <!-- Placeholder for Stripe.js card element -->
+                    </div>
+                    <div class="error" id="card-errors" role="alert"></div>
+                </div>
+                <button type="submit" class="checkout-btn">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripe = Stripe('your-publishable-key-here');
+        const elements = stripe.elements();
+
+        const style = {
+            base: {
+                color: '#32325d',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+
+        const card = elements.create('card', { style: style });
+        card.mount('#card-element');
+
+        card.addEventListener('change', function(event) {
+            const displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        const form = document.getElementById('checkout-form');
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const { token, error } = await stripe.createToken(card);
+
+            if (error) {
+                const errorElement = document.getElementById('card-errors');
+                errorElement.textContent = error.message;
+            } else {
+                alert('Payment successful! Token: ' + token.id);
+            }
+        });
+    </script>
+</body>
+</html>

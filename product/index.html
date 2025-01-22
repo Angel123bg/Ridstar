@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title data-en="Bikes | Ridstar Premium Electric Bikes" data-bg="Мотоциклети | Ridstar Premium Electric Bikes">Колела | Ridstar Premium Electric Bikes</title>
+    <link href="../images/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        /* CSS to hide the language selector in the header on mobile */
+        @media (max-width: 768px) {
+            .header-actions .language-selector {
+                display: none; /* Hide on mobile */
+            }
+        }
+        .language-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/ridstar-logo.png" alt="Лого на Ridstar">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html" data-en="Home" data-bg="Начало">Начало</a></li>
+                        <li><a href="index.html" class="active" data-en="Bikes" data-bg="Мотоциклети">Колела</a></li>
+                        <li><a href="parts.html" data-en="Parts" data-bg="Части">Части</a></li>
+                        <li><a href="../about.html" data-en="About Us" data-bg="За нас">За нас</a></li>
+                        <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                    <div class="cart-icon-wrapper">
+                        <a href="#" class="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="../index.html" class="active" data-en="Home" data-bg="Начало">Начало</a></li>
+                <li><a href="../PRODUCT/index.html" data-en="Bikes" data-bg="Колела">Колела</a></li>
+                <li><a href="../PRODUCT/parts.html" data-en="Parts" data-bg="Части">Части</a></li>
+                <li><a href="../about.html" data-en="About Us" data-bg="За нас">За нас</a></li>
+                <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <main class="site-main">
+            <div class="shop-container">
+                <!-- Page Title -->
+                <div class="page-title">
+                    <h1 data-en="Our Electric Bikes" data-bg="Нашите електрически колела">Нашите електрически колела</h1>
+                    <p data-en="Discover the perfect combination of power and style with our premium electric bikes." data-bg="Открийте перфектната комбинация от мощност и стил с нашите премиум електрически колела.">Открийте перфектната комбинация от мощност и стил с нашите премиум електрически колела.</p>
+                </div>
+
+                <!-- Shop Filters -->
+                <div class="shop-filters">
+                    <div class="filter-wrapper">
+                        <select id="sort-dropdown" class="sort-dropdown">
+                            <option value="default" data-en="Default" data-bg="По подразбиране">По подразбиране</option>
+                            <option value="price-low" data-en="Sort by Price: Low to High" data-bg="Сортиране по цена: ниска към висока">Сортиране по цена: ниска към висока</option>
+                            <option value="price-high" data-en="Sort by Price: High to Low" data-bg="Сортиране по цена: висока към ниска">Сортиране по цена: висока към ниска</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <!-- Q-20 LITE Model -->
+                    <div class="product-card q20" data-category="commuter">
+                        <div class="product-image">
+                            <img src="../images/bike.png" alt="Ridstar Q-20">
+                            <div class="product-badges">
+                                <span class="badge bestseller" data-en="Bestseller" data-bg="Бестселър">Бестселър</span>
+                                <span class="badge sale" data-en="Sale" data-bg="Разпродажба">Разпродажба</span>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h2 data-en="Ridstar Q-20 Lite" data-bg="Ridstar Q-20">Ridstar Q-20</h2>
+                            <div class="product-subtitle" data-en="Base Model" data-bg="Базов модел">Базов модел</div>
+                            <div class="key-specs">
+                                <div class="spec">
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-en="1500W Motor" data-bg="1500W Мотор">1500W Мотор</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-battery-full"></i>
+                                    <span data-en="48V 20AH Battery" data-bg="48V 20AH Батерия">48V 20AH Батерия</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span data-en="33MPH Max Speed" data-bg="33MPH Максимална скорост">33MPH Максимална скорост</span>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p data-en="The perfect entry into electric cycling. Equipped with a powerful motor, long-lasting battery, and premium components for a smooth ride." data-bg="Перфектният вход в електрическото колоездене. Разполага с мощен мотор, дълготрайна батерия и премиум компоненти за гладко каране.">Перфектният вход в електрическото колоездене. Разполага с мощен мотор, дълготрайна батерия и премиум компоненти за гладко каране.</p>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-tag">
+                                    <span class="current-price">2300лв</span>
+                                    <span class="original-price">2500лв</span>
+                                </div>
+                                <button class="learn-more-btn" onclick="window.location.href='bike-details.html?id=q20'" data-en="Learn More" data-bg="Научете повече">Научете повече</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Q-20 Pro Model -->
+                    <div class="product-card premium" data-category="commuter">
+                        <div class="product-image">
+                            <img src="../images/bike2.png" alt="Ridstar Q-20 Pro">
+                            <div class="product-badges">
+                                <span class="badge new" data-en="New" data-bg="Нов">Нов</span>
+                                <span class="badge premium" data-en="Premium" data-bg="Премиум">Премиум</span>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h2 data-en="Ridstar Q-20 Pro" data-bg="Ridstar Q-20 Pro">Ridstar Q-20 Pro</h2>
+                            <div class="product-subtitle" data-en="Premium Model" data-bg="Премиум модел">Премиум модел</div>
+                            <div class="key-specs">
+                                <div class="spec">
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-en="2000W Motor" data-bg="2000W Мотор">2000W Мотор</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-battery-full"></i>
+                                    <span data-en="48V 25AH Battery" data-bg="48V 25AH Батерия">48V 25AH Батерия</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span data-en="40MPH Max Speed" data-bg="40MPH Максимална скорост">40MPH Максимална скорост</span>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p data-en="Our flagship with enhanced power, extended range, and premium features for the best riding experience." data-bg="Нашият флагман с подобрена мощност, удължен обхват и премиум функции за най-доброто изживяване при каране.">Нашият флагман с подобрена мощност, удължен обхват и премиум функции за най-доброто изживяване при каране.</p>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-tag">
+                                    <span class="current-price">2700лв</span>
+                                    <span class="original-price">3000лв</span>
+                                </div>
+                                <button class="learn-more-btn" onclick="window.location.href='bike-details.html?id=q20-pro'" data-en="Learn More" data-bg="Научете повече">Научете повече</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ridstar MN-26 Model -->
+                    <div class="product-card street-model" data-category="street">
+                        <div class="product-image">
+                            <img src="../images/bike3.jpg" alt="Ridstar MN-26">
+                            <div class="product-badges">
+                                <span class="badge new" data-en="New" data-bg="Нов">Нов</span>
+                                <span class="badge street" data-en="Street Ready" data-bg="Готов за улицата">Готов за улицата</span>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h2 data-en="Ridstar MN-26" data-bg="Ridstar MN-26">Ridstar MN-26</h2>
+                            <div class="product-subtitle" data-en="Street Model" data-bg="Уличен модел">Уличен модел</div>
+                            <div class="key-specs">
+                                <div class="spec">
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-en="1500W Motor" data-bg="1500W Мотор">1500W Мотор</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-road"></i>
+                                    <span data-en="Street Ready" data-bg="Готов за улицата">Готов за устието</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-battery-full"></i>
+                                    <span data-en="48V 20AH Battery" data-bg="48V 20AH Батерия">48V 20AH Батерия</span>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p data-en="Conquer any terrain with our powerful street electric bike, designed for urban adventures." data-bg="Покорете всякакви терени с нашия мощен електрически велосипед, проектиран за градски приключения.">Покорете всякакви терени с нашия мощен електрически велосипед, проектиран за градски приключения.</p>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-tag">
+                                    <span class="current-price">2200лв</span>
+                                    <span class="original-price">2500лв</span>
+                                </div>
+                                <button class="learn-more-btn" onclick="window.location.href='bike-details.html?id=m30'" data-en="Learn More" data-bg="Научете повече">Научете повече</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sport Model -->
+                    <div class="product-card red-model" data-category="sport">
+                        <div class="product-image">
+                            <img src="../images/bike4.png" alt="Ridstar S-15">
+                            <div class="product-badges">
+                                <span class="badge hot" data-en="Hot" data-bg="Горещо">Горещо</span>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h2 data-en="Ridstar H20" data-bg="Ridstar H20">Ridstar H20</h2>
+                            <div class="product-subtitle" data-en="Sport Edition" data-bg="Спортно издание">Спортно издание</div>
+                            <div class="key-specs">
+                                <div class="spec">
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-en="1000W Motor" data-bg="1000W Мотор">1000W Мотор</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-weight"></i>
+                                    <span data-en="Ultra Light" data-bg="Ултра лек">Ултра лек</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span data-en="38MPH Max Speed" data-bg="38MPH Максимална скорост">38MPH Максимална скорост</span>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p data-en="Lightweight and agile electric bike designed for speed enthusiasts and urban adventures." data-bg="Лек и маневрен електрически велосипед, проектиран за любителите на скоростта и градските приключения.">Лек и маневрен електрически велосипед, проектиран за любителите на скоростта и градските приключения.</p>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-tag">
+                                    <span class="current-price">1800лв</span>
+                                    <span class="original-price">2000лв</span>
+                                </div>
+                                <button class="learn-more-btn" onclick="window.location.href='bike-details.html?id=s15'" data-en="Learn More" data-bg="Научете повече">Научете повече</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Bike Model -->
+                    <div class="product-card" data-category="commuter">
+                        <div class="product-image">
+                            <img src="../images/q20-lite.png" alt="Ridstar Q-20 Lite">
+                            <div class="product-badges">
+                                <span class="badge new" data-en="New" data-bg="Нов">Нов</span>
+                                <span class="badge cheap" data-en="Cheap" data-bg="Изгоден">Изгоден</span> <!-- Cheap Badge -->
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h2 data-en="Ridstar Q-20 Lite" data-bg="Ridstar Q-20 Lite">Ridstar Q-20 Lite</h2>
+                            <div class="product-subtitle" data-en="1000W Fat Tire Electric Bicycle" data-bg="Електрически велосипед с дебели гуми 1000W">Електрически велосипед с дебели гуми 1000W</div>
+                            <div class="key-specs">
+                                <div class="spec">
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-en="1000W Motor" data-bg="1000W Мотор">1000W Мотор</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-battery-full"></i>
+                                    <span data-en="48V 15AH Battery" data-bg="48V 15AH Батерия">48V 15AH Батерия</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span data-en="Max Speed: 25 MPH" data-bg="Максимална скорост: 25 MPH">Максимална скорост: 25 MPH</span>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p data-en="Versatile in all road conditions with a maximum range of 50 miles." data-bg="Универсален за всички пътни условия с максимален обхват от 50 мили.">Универсален за всички пътни условия с максимален обхват от 50 мили.</p>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-tag">
+                                    <span class="current-price">1850лв</span>
+                                    <span class="original-price">2000лв</span>
+                                </div>
+                                <button class="learn-more-btn" onclick="window.location.href='bike-details.html?id=q20-lite'" data-en="Learn More" data-bg="Научете повече">Научете повече</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Electric Bike Model -->
+                    <div class="product-card street-model" data-category="street">
+                        <div class="product-image">
+                            <img src="../images/fat-tire-bike.png" alt="Electric Bike 26inch Fat Tire">
+                            <div class="product-badges">
+                                <span class="badge new" data-en="New" data-bg="Нов">Нов</span>
+                                <span class="badge street" data-en="Street Ready" data-bg="Готов за улицата">Готов за улицата</span>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h2 data-en="Electric Bike 26inch Fat Tire" data-bg="Електрически велосипед 26 инча с дебели гуми">Ridstar MN-26</h2>
+                            <div class="product-subtitle" data-en="1500W Motor, 20AH Lithium Battery" data-bg="1500W Мотор, 20AH Литиева Батерия">1500W Мотор, 20AH Литиева Батерия</div>
+                            <div class="key-specs">
+                                <div class="spec">
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-en="1500W Motor" data-bg="1500W Мотор">1500W Мотор</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-battery-full"></i>
+                                    <span data-en="20AH Lithium Battery" data-bg="20AH Литиева Батерия">20AH Литиева Батерия</span>
+                                </div>
+                                <div class="spec">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span data-en="Max Speed: 28 MPH" data-bg="Максимална скорост: 28 MPH">Максимална скорост: 28 MPH</span>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <p data-en="Perfect for city delivery and road use, combining power and versatility." data-bg="Перфектен за доставка в града и пътна употреба, комбиниращ мощност и универсалност.">Перфектен за доставка в града и пътна употреба, комбиниращ мощност и универсалност.</p>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-tag">
+                                    <span class="current-price">1099$</span>
+                                    <span class="original-price">1399$</span>
+                                </div>
+                                <button class="learn-more-btn" onclick="window.location.href='bike-details.html?id=fat-tire'" data-en="Learn More" data-bg="Научете повече">Научете повече</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Cart Overlay -->
+        <div class="cart-overlay">
+            <div class="cart-modal">
+                <div class="cart-header">
+                    <h2 data-en="Shopping Cart" data-bg="Пазарска количка">Пазарска количка</h2>
+                    <button class="close-cart">&times;</button>
+                </div>
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span data-en="Total:" data-bg="Общо:">Общо:</span>
+                        <span class="total-amount">0.00$</span>
+                    </div>
+                </div>
+                <button class="checkout-btn" onclick="toggleCheckout()" data-en="Checkout" data-bg="Плащане">Плащане</button>
+            </div>
+        </div>
+                    
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-widgets">
+                    <div class="footer-widget">
+                        <h3 data-en="About Ridstar" data-bg="За Ridstar">За Ridstar</h3>
+                        <p data-en="Premium electric motorcycles designed for the modern rider." data-bg="Премиум електрически мотоциклети, проектирани за съвременния ездач.">Премиум електрически мотоциклети, проектирани за съвременния ездач.</p>
+                    </div>
+                    <div class="footer-widget">
+                        <h3 data-en="Quick Links" data-bg="Бързи връзки">Бързи връзки</h3>
+                        <ul>
+                            <li><a href="../about.html" data-en="About Us" data-bg="За нас">За нас</a></li>
+                            <li><a href="../contact.html" data-en="Contact" data-bg="Контакт">Контакт</a></li>
+                            <li><a href="../shipping-policy.html" data-en="Shipping Policy" data-bg="Политика за доставка">Политика за доставка</a></li>
+                            <li><a href="../returns-policy.html" data-en="Returns Policy" data-bg="Политика за връщане">Политика за връщане</a></li>
+                            <li><a href="../FAQ.html" data-en="faq" data-bg="Често задавани въпроси">Често задавани въпроси</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3 data-en="Follow Us" data-bg="Следвайте ни">Следвайте ни</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/ridstarbulgaria/"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.tiktok.com/@ridstarbulgaria"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Ridstar. Всички права запазени.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/cart.js"></script>
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/product.js"></script>
+    <script>
+        let currentLanguage = 'bg';
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'bg' ? 'en' : 'bg';
+            updateContent();
+            
+            // Update the button text
+            const langButton = document.querySelector('.language-button');
+            langButton.textContent = langButton.getAttribute(`data-${currentLanguage}`);
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sortDropdown = document.getElementById('sort-dropdown');
+            const productCards = Array.from(document.querySelectorAll('.product-card'));
+            const productGrid = document.querySelector('.products-grid');
+
+            // Store the original order of product cards
+            const originalOrder = [...productCards];
+
+            sortDropdown.addEventListener('change', function() {
+                const selectedValue = this.value;
+
+                let sortedCards;
+
+                if (selectedValue === 'price-low') {
+                    sortedCards = productCards.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector('.current-price').textContent.replace('$', ''));
+                        const priceB = parseFloat(b.querySelector('.current-price').textContent.replace('$', ''));
+                        return priceA - priceB;
+                    });
+                } else if (selectedValue === 'price-high') {
+                    sortedCards = productCards.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector('.current-price').textContent.replace('$', ''));
+                        const priceB = parseFloat(b.querySelector('.current-price').textContent.replace('$', ''));
+                        return priceB - priceA;
+                    });
+                } else {
+                    // Reset to original order when "Default" is selected
+                    sortedCards = originalOrder;
+                }
+
+                // Remove all product cards from the DOM
+                productGrid.innerHTML = '';
+
+                // Append sorted cards back to the grid
+                sortedCards.forEach(card => {
+                    productGrid.appendChild(card);
+                });
+            });
+        });
+    </script>
+    <script>        
+    // Assuming currentLanguage is already declared in the first script block
+    const exchangeRate = 1.96; // Example exchange rate: 1 EUR = 1.96 BGN
+
+    function toggleLanguage() {
+        currentLanguage = currentLanguage === 'en' ? 'bg' : 'en';
+            updateContent();
+            updatePrices(); // Update prices when language changes
+            
+            // Update the button text
+            const langButton = document.querySelector('.language-button');
+            langButton.textContent = langButton.getAttribute(`data-${currentLanguage}`);
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+
+        function updatePrices() {
+            const priceElements = document.querySelectorAll('.current-price, .original-price');
+            priceElements.forEach(priceElement => {
+                // Store original price in a data attribute if not already done
+                if (!priceElement.dataset.originalPrice) {
+                    priceElement.dataset.originalPrice = priceElement.textContent.replace('лв', '').replace('€', '').trim();
+                }
+                const originalPrice = parseFloat(priceElement.dataset.originalPrice);
+                if (currentLanguage === 'en') {
+                    // Convert to Euro without decimal places
+                    priceElement.textContent = Math.round(originalPrice / exchangeRate) + '€';
+                } else {
+                    // Convert to BGN without decimal places
+                    priceElement.textContent = originalPrice.toFixed(0) + 'лв';
+                }
+            });
+        }
+    </script>
+    <button class="language-button" onclick="toggleLanguage()" data-en="БГ" data-bg="EN">EN</button>
+    <script>
+        function toggleCheckout() {
+            // Logic to handle the checkout process
+            // For example, you might want to redirect to a checkout page or display a checkout modal
+            window.location.href = '../checkout.html'; // Redirect to a checkout page
+        }
+    </script>
+</body>
+</html>

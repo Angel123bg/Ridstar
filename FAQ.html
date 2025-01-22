@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Frequent Answers and Questions</h1>
+    </header>
+    <main>
+        <div class="faq-item">
+            <div class="faq-question">+</div>
+            <div class="faq-text">What is the difference between the Free and Paid versions?</div>
+            <div class="faq-answer">The Free version offers basic features, while the Paid version includes advanced functionalities and support.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">+</div>
+            <div class="faq-text">What email systems (ESPs) does Postcards work with?</div>
+            <div class="faq-answer">Postcards works with various ESPs including Mailchimp, SendGrid, and others.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">+</div>
+            <div class="faq-text">Do you plan on adding more blocks to the Postcards Generator?</div>
+            <div class="faq-answer">Yes, we are continuously working on adding new blocks to enhance user experience.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">+</div>
+            <div class="faq-text">Are there any limits to the number of exported emails from Postcards Generator?</div>
+            <div class="faq-answer">There are no limits on the number of emails you can export with the Paid version.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">+</div>
+            <div class="faq-text">Do you provide any support?</div>
+            <div class="faq-answer">Yes, we provide 24/7 support for all our users.</div>
+        </div>
+    </main>
+    <script>
+        // JavaScript for toggling FAQ answers
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                item.querySelector('.faq-question').textContent = answer.style.display === 'block' ? '-' : '+';
+            });
+        });
+    </script>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    margin-right: 10px;
+    font-size: 1.5em; /* Adjust size for better visibility */
+}
+
+.faq-text {
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.faq-answer {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    color: #555;
+}
+</style>
+</body>
+</html>
